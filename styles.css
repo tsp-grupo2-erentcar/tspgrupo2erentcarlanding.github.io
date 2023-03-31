@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.sticky{
+    background: hsla(0, 0%, 15%, 0.932);
+}
+nav .nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: auto;
+}
+.nav-content .logo a{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 91%);
+}
+nav .nav-content .nav-links{
+    height: 100%;
+}
+.nav-content .nav-links .links{
+    display: flex;
+    align-items: center;
+}
+.nav-content .nav-links .links li{
+    list-style: none;
+    margin: 0 8px;
+}
+.nav-content .nav-links .links li a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 77%);
+    padding: 8px 4px;
+}
+.sidebar-logo .logo-name,.sidebar-logo .bx-x,.nav-content .bx-menu{
+    display: none;
+}
+/*****HERO*****/
+.hero{
+    height: 500px;
+    width: 100%;
+    background: #092c3e;
+    /*background: #17375b;*/
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hero::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 500px;
+    width: 100%;
+    border-radius: 0 12px 12px 0;
+    clip-path: circle(65% at right 25%);
+    background: #17375b;
+    z-index: 0;
+    object-fit: contain;
+}
+.hero-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    z-index: 1;
+    width: 100%;
+}
+.hero-column{
+    z-index: 1;
+}
+.hero-column h1{
+    font-size: 2.3rem;
+    color: hsl(0, 0%, 91%);
+    margin-bottom: 10px;
+}
+.hero-column span{
+    font-size: 2.3rem;
+    color: hsl(46, 96%, 40%);
+}
+.hero-column p{
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 91%);
+    margin-top: 30px;
+}
+.hero-column img{
+    width: 620px;
+    height: 300px;
+    object-fit: contain;
+}
+.hero-column-left{
+    max-width: 350px;
+}
+/*****BENEFITS*****/
+.benefits{
+    position: absolute;
+    width: 700px;
+    border-radius: 12px;
+    margin: auto;
+    background: rgb(231, 231, 231);
+    z-index: 1;
+    bottom:-35px;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+}
+.benefits-content{
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+    padding: 15px 10px;
+}
+.benefits-column{
+    list-style: none;
+    z-index: 1;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.benefits-column i{
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #17375b;
+}
+.benefits-column h3{
+    font-size: 1.1rem;
+    color: #17375b;
+}
+.benefits-content .separator{
+    width: 1px;
+    background: grey;
+}
+/*****CARS*****/
+.section-one{
+    width: 100%;
+    background: rgb(226, 223, 223);
+}
+.cars{
+    padding-top: 80px;
+    text-align: center;
+}
+.title-section{
+    font-size: 2.0rem;
+    font-weight: 1200;
+    color: rgb(29, 29, 29);
+}
+.cars-content{
+    max-width: 1420px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 25px 10px;
+}
+.cars-content .card-cars{
+    border-radius: 10px;
+    width: 23%;
+    padding: 15px 10px;
+    background: rgb(245, 245, 245);
+    box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
+    -moz-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
+}
+.card-cars h5{
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.card-cars-image{
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+}
+.card-cars-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.card-cars-price{
+    text-align: left;
+    font-size: 1.0rem;
+    font-weight: 500;
+}
+.cars-feature{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.cars-feature-icon i{
+    color: #17375b;
+    font-size: 1.3rem;
+    background: rgba(137, 143, 168, 0.158);
+    padding: 5px;
+    border-radius: 5px;
+}
+.cars-feature-icon h6{
+    color: #17375b;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.cars-button-container{
+    width: 100%;
+    margin-top: 20px;
+}
+.cars-button-container button{
+    padding: 10px 6px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1.0rem;
+    color: #f2f2f2;
+    background: #02507e;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.cars-button-container button:hover{
+    background: #17375b;
+}
+/*****SERVICES*****/
+.services{
+    padding-top: 60px;
+}
+.services-content{
+    max-width: 1420px;
+    margin: auto;
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.services-image{
+    width: 350px;
+    height: 410px;
+    border-radius: 20px;
+}
+.services-image img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+    object-fit:cover;
+}
+.services-features-container{
+    width: 52%;
+    display: flex;
+    align-items: center;
+}
+.services-features-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    margin-top: 60px;
+}
+.services-features{
+    width: 48%;
+    display: flex;
+    padding: 5px 0px;
+}
+.services-icon-container{
+    color: rgba(231, 231, 231, 0.904);
+    background: #17375b;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: solid 3px #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    min-width: 50px;
+}
+.services-feature-description{
+    margin-left: 10px;
+}
+.services-feature-description h4{
+    font-size: 1.2rem;
+    color: #0e0d0d;
+    font-weight: 1000;
+}
+.services-feature-description p{
+    font-size: 0.9rem;
+    color: #221f1f;
+    font-weight: 300;
+    margin-top: 9px;
+}
+/*****FORM*****/
+.section-form{
+    padding-top: 45px;
+}
+.section-form .title-section{
+    text-align: center;
+}
+.section-form .subtitle-section{
+    text-align: center;
+    font-size: 0.9rem;
+    color: #221f1f;
+    font-weight: 400;
+    margin-top: 12px;
+}
+.input-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 28px;
+}
+.input-content{
+    display: flex;
+}
+.input-content input{
+    padding: 8px 5px;
+    width:400px;
+    outline: none;
+    background: rgb(241, 241, 241);
+    border: none;
+}
+.input-content button{
+    outline: none;
+    padding: 2px 8px;
+    font-size: 1.0rem;
+    color: #f2f2f2;
+    background: #02507e;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.input-content button:hover{
+    background: #17375b;
+}
+.input-icon-container{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    color: #221f1f;
+    font-size: 1.5rem;
+    min-width: 50px;
+    background: rgb(241, 241, 241);
+}
+/*****RATES *****/
+.section-rates{
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+.rates-container{
+    max-width: 1420px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding: 5px 10px;
+}
+.section-rates .title-section{
+    text-align: center;
+}
+.card-rate{
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    width: 25%;
+    box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
+    -moz-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #17375b;
+    border-radius: 25px 25px 0px 25px;
+}
+.overlay::before,.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #17375b;
+}
+.overlay::after{
+    border-radius: 0 25px 0px 0px;
+    background-color: #fff;
+}
+.card-rate-image-container, .card-rate-description-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+.card-rate-image-container{
+    row-gap: 5px;
+    position: relative;
+    padding: 20px 0px;
+}
+.card-rate-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    padding: 3px;
+}
+.card-rate-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #17375b;
+}
+.card-rate-name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #080808;
+}
+.card-rate-description{
+    font-size: 1.1rem;
+    color: #221f1f;
+    text-align: center;
+}
+/*****FOOTER *****/
+footer{
+    width: 100%;
+    background-color: #0e0d0d;
+    padding: 5px 10px;
+}
+.footer-top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: solid 2px #555555;
+    padding: 20px 10px;
+}
+.footer-logo{
+    color: hsl(0, 0%, 95%);
+    font-size: 1.5rem;
+}
+.footer-social{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-social a{
+    text-decoration: none;
+    color: #f2f2f2;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0px 8px;
+}
+.fb{
+    background-color: #02507e;
+}
+.tw{
+    background-color: #047bc0;
+}
+.yt{
+    background-color: #e01818;
+}
+.footer-mid{
+    padding: 10px 10px 0px 10px;
+}
+.company{
+    list-style: none;
+}
+.company li{
+    padding-bottom: 10px;
+    color: hsl(0, 0%, 95%);
+}
+.company .footer-name{
+    font-size: 1.0rem;
+}
+.footer-data{
+    font-size: 0.8rem;
+}
+@media(max-width: 1024px){
+    nav .nav-content .nav-links{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        max-width: 270px;
+        width: 100%;
+        background: hsl(0, 0%, 25%);
+        line-height: 40px;
+        padding: 20px;
+        left: -100%;
+        transition: all 0.3s ease;
+        z-index: 5;
+    }
+    nav .nav-content .nav-links .sidebar-logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 5;
+    }
+    nav .nav-content .nav-links .links{
+        display: block;
+        z-index: 5;
+    }
+    .nav-links .sidebar-logo .logo-name,
+    .nav-links .sidebar-logo .bx-x,.nav-content .bx-menu{
+        color: #fff;
+        font-size: 1.5rem;
+        display: block;
+        z-index: 5;
+    }
+    .hero-column h1{
+        font-size: 2.1rem;
+    }
+    .hero-column span{
+        font-size: 2.1rem;
+    }
+    .hero-column p{
+        font-size: 1.1rem;
+    }
+    .hero-column img{
+        width: 450px;
+        height: 260px;
+    }
+    .hero-column-left{
+        margin-bottom: 20px;
+    }
+    .cars-content .card-cars{
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    .services-image{
+        width: 250px;
+        height: 340px;
+    }
+    .services-features-content{
+        margin-top: 40px;
+    }
+    .services-feature-description h4{
+        font-size: 1.0rem;
+    }
+    .services-feature-description p{
+        font-size: 0.8rem;
+    }
+    .input-content input{
+        width: 300px;
+    }
+    .section-rates{
+        padding-top: 40px;
+    }
+    .rates-container{
+        row-gap: 30px;
+    }
+    .card-rate{
+        width: 40%;
+    }
+    .card-rate-image{
+        height: 100px;
+        width: 100px;
+    }
+    .card-rate-name{
+        font-size: 1.0rem;
+    }
+    .card-rate-description{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 540px){
+    .title-section{
+        font-size: 1.5rem;
+    }
+    nav .nav-content .nav-links{
+        max-width: 100%;
+        z-index: 5;
+    }
+    .hero-column h1{
+        font-size: 2.1rem;
+    }
+    .hero-column span{
+        font-size: 2.1rem;
+    }
+    .hero-column p{
+        font-size: 1.1rem;
+    }
+    .hero-column img{
+        width: 280px;
+        height: 200px;
+    }
+    .hero-column-left{
+        margin-bottom: 30px;
+    }
+    .hero::before{
+        clip-path: circle(75% at right 45%);
+    }
+    .benefits{
+        width: 80%;
+        bottom:-160px;
+    }
+    .benefits-column{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .cars{
+        padding-top: 210px;
+    }
+    .cars-content .card-cars{
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    .services{
+        padding-top: 20px;
+    }
+    .services-image{
+        display: none;
+    }
+    .services-features-container{
+        width: 90%;
+        padding: 5px 2px;
+    }
+    .services-features{
+        width: 90%;
+    }
+    .input-content input{
+        width: 200px;
+    }
+    .rates-container{
+        row-gap: 20px;
+    }
+    .card-rate{
+        width: 90%;
+    }
+    .footer-top{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .footer-logo{
+        text-align: center;
+    }
+    .company{
+        text-align: center;
+    }
+}
