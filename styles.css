@@ -671,3 +671,9 @@ footer{
         text-align: center;
     }
 }
+.card-cars-img{
+    transition: transform .2s;
+}
+.card-cars-img:hover{
+    transform:scale(1.5);
+}
