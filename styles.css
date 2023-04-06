@@ -366,89 +366,7 @@ nav .nav-content .nav-links{
     min-width: 50px;
     background: rgb(241, 241, 241);
 }
-/*****RATES *****/
-.section-rates{
-    padding-top: 70px;
-    padding-bottom: 40px;
-}
-.rates-container{
-    max-width: 1420px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 30px;
-    padding: 5px 10px;
-}
-.section-rates .title-section{
-    text-align: center;
-}
-.card-rate{
-    border-radius: 25px;
-    background-color: #f2f2f2;
-    width: 25%;
-    box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
-    -webkit-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
-    -moz-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.55);
-}
-.overlay{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #17375b;
-    border-radius: 25px 25px 0px 25px;
-}
-.overlay::before,.overlay::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #17375b;
-}
-.overlay::after{
-    border-radius: 0 25px 0px 0px;
-    background-color: #fff;
-}
-.card-rate-image-container, .card-rate-description-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
-}
-.card-rate-image-container{
-    row-gap: 5px;
-    position: relative;
-    padding: 20px 0px;
-}
-.card-rate-image{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: #f2f2f2;
-    padding: 3px;
-}
-.card-rate-image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #17375b;
-}
-.card-rate-name{
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #080808;
-}
-.card-rate-description{
-    font-size: 1.1rem;
-    color: #221f1f;
-    text-align: center;
-}
+
 /*****FOOTER *****/
 footer{
     width: 100%;
@@ -670,4 +588,134 @@ footer{
     .company{
         text-align: center;
     }
+}
+.card-cars-img{
+    transition: transform .2s;
+}
+.card-cars-img:hover{
+    transform:scale(1.5);
+}
+
+/***CAROUSEL REVIEWS***/
+
+:root{
+    --color-dark: #151C35;
+    --color-secodary-dark: #464C70;
+    --color-primary: #EE709D;
+    --color-text: #8297E2;
+    --color-light: #EBEBFB;
+}
+
+.container{
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    max-width: 987px;
+    width: 100%;
+    background-color: var(--color-dark);
+    text-align: center;
+    border-radius: 8px;
+    padding: 4em 0;
+}
+
+.text-light{
+    color: var(--color-light);
+}
+
+.swiper {
+    width: 600px;
+    height: auto;
+  }
+
+.swiper .swiper-slide .flex{
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper .swiper-slide .comments{
+    background-color: var(--color-light);
+    padding: 1.5em 2em;
+    width: 50%;
+    border-radius: 5px;
+    font-size: .9em;
+    position: relative;
+}
+
+.swiper .swiper-slide .comments::after{
+    content: '';
+    position: absolute;
+    bottom: -19px;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--color-light);
+    z-index: -99;
+}
+
+
+.swiper .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.swiper .profile img{
+    width: 30%;
+    border-radius: 50%;
+    border: 5px solid var(--color-primary);
+    margin: 10px 0;
+}
+
+.swiper .profile > a{
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+.swiper .profile > span{
+    color: var(--color-text);
+    font-size: .8em;
+}
+
+.swiper .swiper-button-prev, .swiper-button-next{
+    color: var(--color-text);
+    display: none;
+} 
+
+@media (min-width: 320px) {
+    .board{
+        width: auto;
+    }
+
+    .swiper {
+        width: 320px;
+      }
+
+      .board > h1, p{
+          padding: 0 2em;
+      }
+}
+
+@media (min-width: 768px) {
+    .board{
+        width: 100%;
+    }
+
+    .swiper {
+        width: 600px;
+      }
+
+    .swiper .swiper-button-prev, .swiper-button-next{
+        display: initial;
+    }
+
 }
