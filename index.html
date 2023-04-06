@@ -6,6 +6,10 @@
         <title>ERentCar</title>
         <link rel="stylesheet" href="styles.css">
         <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+        />
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
@@ -244,63 +248,67 @@
             </div>
         </section>
         <section class="section-one section-rates">
-            <h1 class="title-section">What customers are saying</h1>
-            <div class="rates-container">
-                <div class="card-rate">
-                    <div class="card-rate-image-container">
-                        <span class="overlay"></span>
-                        <div class="card-rate-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-IFVAnDFmPDjhijJijwlt_XvLuLh3FJV-Ug&usqp=CAU" alt="">
+            <div class="container">
+                <div class="board">
+                    <h2 class="text-light">What customers are saying</h2>
+                    
+        
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="flex">
+                                <div class="comments">
+                                    ¡Felicitaciones por el excelente funcionamiento de la página web! La navegación es sencilla y todo está bien organizado. ¡Gran trabajo!
+                                </div>
+                                <div class="profile">
+                                    <img src="https://www.random-name-generator.com/images/faces/female-white/08.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1" alt="">
+                                    <a href="#">Fabiana Santillán</a>
+                                    <span>Miembro hace 3 meses</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-rate-description-container">
-                        <h2 class="card-rate-name">Olivia Dell</h2>
-                        <p class="card-rate-description">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Quas repudiandae unde, praesentium perspiciatis quae 
-                            laboriosam qui maiores illum, in, ex eligendi 
-                            voluptatibus similique sit iure consectetur soluta 
-                            veniam laudantium exercitationem?
-                        </p>
-                    </div>
-                </div>
-                <div class="card-rate">
-                    <div class="card-rate-image-container">
-                        <span class="overlay"></span>
-                        <div class="card-rate-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-IFVAnDFmPDjhijJijwlt_XvLuLh3FJV-Ug&usqp=CAU" alt="">
+                        <div class="swiper-slide">
+                            <div class="flex">
+                                <div class="comments">
+                                    Quiero expresar mi felicitación por el excelente funcionamiento de su página web. Todo es fácil de encontrar y la velocidad de carga es impresionante. ¡Continúen con el buen trabajo!
+                                 </div>
+                                <div class="profile">
+                                    <img src="https://www.random-name-generator.com/images/faces/male-white/23.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1" alt="">
+                                    <a href="#">Adrián Amaya</a>
+                                    <span>Miembro hace 2 años</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-rate-description-container">
-                        <h2 class="card-rate-name">Olivia Dell</h2>
-                        <p class="card-rate-description">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Quas repudiandae unde, praesentium perspiciatis quae 
-                            laboriosam qui maiores illum, in, ex eligendi 
-                            voluptatibus similique sit iure consectetur soluta 
-                            veniam laudantium exercitationem?
-                        </p>
-                    </div>
-                </div>
-                <div class="card-rate">
-                    <div class="card-rate-image-container">
-                        <span class="overlay"></span>
-                        <div class="card-rate-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-IFVAnDFmPDjhijJijwlt_XvLuLh3FJV-Ug&usqp=CAU" alt="">
+                        <div class="swiper-slide">
+                            <div class="flex">
+                                <div class="comments">
+                                    ¡Felicidades por la página web bien diseñada y funcional! La información es clara y concisa, y todo funciona sin problemas. ¡Excelente trabajo!
+                                </div>
+                                <div class="profile">
+                                    <img src="https://www.random-name-generator.com/images/faces/male-white/08.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1" alt="">
+                                    <a href="#">Alex González</a>
+                                    <span>Miembro hace 5 años</span>
+                                </div>
+                            </div>
                         </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                
                     </div>
-                    <div class="card-rate-description-container">
-                        <h2 class="card-rate-name">Olivia Dell</h2>
-                        <p class="card-rate-description">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Quas repudiandae unde, praesentium perspiciatis quae 
-                            laboriosam qui maiores illum, in, ex eligendi 
-                            voluptatibus similique sit iure consectetur soluta 
-                            veniam laudantium exercitationem?
-                        </p>
-                    </div>
+        
                 </div>
             </div>
+        
+            <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+            <script src="./main.js"></script>
         </section>
         <footer>
             <div class="footer-top">
